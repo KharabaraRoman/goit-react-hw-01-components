@@ -1,5 +1,5 @@
 import React from 'react'
-import { Photo, UserName, Tag, Location, ListItem, Items, Stats } from './Profile.styled'
+import { Photo, UserName, Tag, Location, List, Item, Stats } from './Profile.styled'
 import PropTypes from 'prop-types';
 
 
@@ -17,20 +17,20 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <Location>{location}</Location>
             </div>
 
-            <ListItem>
-                <Items>
+            <List>
+                <Item>
                     <span>Followers</span>
                     <Stats>{stats.followers}</Stats>
-                </Items>
-                <Items>
+                </Item>
+                <Item>
                     <span>Views</span>
                     <Stats>{stats.views}</Stats>
-                </Items>
-                <Items>
+                </Item>
+                <Item>
                     <span>Likes</span>
                     <Stats>{stats.likes}</Stats>
-                </Items>
-            </ListItem>
+                </Item>
+            </List>
         </div>
     )
 }

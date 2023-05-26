@@ -27,13 +27,13 @@ export const Location = styled.p`
     font-size: 18px;
     font-weight: 500;
 `
-export const ListItem = styled.ul`
+export const List = styled.ul`
     display: flex;
     justify-content: center;
     gap: 200px;
     margin-top: 70px;
 `
-export const Items = styled.li`
+export const Item = styled.li`
     display: flex;
     flex-direction: column;
     font-size: 16px;

@@ -9,7 +9,7 @@ export const Statistics = ({ title, stats }) => {
     return (
         <section>
             <div>
-                {title !== "" && <Title>{title}</Title>}
+                {title && <Title>{title}</Title>}
                 {stats && (
                     <StatList>
                         {stats.map((stat) => (
@@ -23,16 +23,17 @@ export const Statistics = ({ title, stats }) => {
             </div>
         </section>
     );
-}
+};
+
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     stats: PropTypes.arrayOf(
         PropTypes.shape({
             id: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
-            percentage: PropTypes.number.isRequired
+            percentage: PropTypes.number.isRequired,
         })
-    ).isRequired
+    ),
 };
 
 
